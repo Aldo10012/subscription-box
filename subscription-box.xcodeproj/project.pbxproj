@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633442C225D477980082BBB9 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633442C125D477980082BBB9 /* LoginPageView.swift */; };
 		636C911825CB770900642027 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636C911725CB770900642027 /* OnboardingPageView.swift */; };
 		637B69A625D210DF00D476B4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B69A525D210DF00D476B4 /* HomeVC.swift */; };
 		637B69A925D2110100D476B4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B69A825D2110100D476B4 /* LoginVC.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633442C125D477980082BBB9 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		636C911725CB770900642027 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		637B69A525D210DF00D476B4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		637B69A825D2110100D476B4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				636C911725CB770900642027 /* OnboardingPageView.swift */,
+				633442C125D477980082BBB9 /* LoginPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				63A2DED925C76FBB00C1D31B /* ViewController.swift in Sources */,
 				637B69A625D210DF00D476B4 /* HomeVC.swift in Sources */,
+				633442C225D477980082BBB9 /* LoginPageView.swift in Sources */,
 				637B69A925D2110100D476B4 /* LoginVC.swift in Sources */,
 				63A2DED525C76FBB00C1D31B /* AppDelegate.swift in Sources */,
 				636C911825CB770900642027 /* OnboardingPageView.swift in Sources */,

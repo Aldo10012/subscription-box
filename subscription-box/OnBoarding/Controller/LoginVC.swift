@@ -9,15 +9,9 @@ import UIKit
 
 class LoginVC: UIViewController {
 
-    let loginButton : UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
-        button.setTitleColor(UIColor.darkGray, for: .normal)
-        button.backgroundColor = UIColor.white
-        button.layer.cornerRadius = 10
-        button.layer.masksToBounds = true
-        return button
+    let loginPage: LoginPageView = {
+        let view = LoginPageView(pageColor: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1), title: "KovidKit", image:"remote-work-man")
+        return view
     }()
     
     
@@ -25,17 +19,14 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.addSubview(loginButton)
-        setupLoginButton()
-        
-        // Do any additional setup after loading the view.
+        self.view.addSubview(loginPage)
+        NSLayoutConstraint.activate([
+            loginPage.widthAnchor.constraint(equalToConstant: view.frame.size.width),
+            loginPage.heightAnchor.constraint(equalToConstant: view.frame.size.height),
+            loginPage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginPage.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
-    
-    func setupLoginButton(){
-        loginButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-        loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
-    }
-    
     
     
     

@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds) //needed to not use storyboard
-        let vc = ViewController() //needed to not use storyboard
+        let vc = LoginVC() //needed to not use storyboard
         //navigationController = UINavigationController(rootViewController: vc)
         window?.rootViewController = vc //needed to not use storyboard
         window?.makeKeyAndVisible() //needed to not use storyboard
