@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ViewController: UIViewController {
+class OnboardingVC: UIViewController {
 
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView( )

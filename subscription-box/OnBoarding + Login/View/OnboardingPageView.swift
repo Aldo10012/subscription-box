@@ -13,6 +13,18 @@ class OnboardingPageView: UIView {
     var message : String = ""
     var isLastPage : Bool = false
     
+    let button : UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Continue", for: .normal)
+        button.setTitleColor(UIColor.darkGray, for: .normal)
+        button.backgroundColor = UIColor.white
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(goLogin), for: .touchUpInside)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -63,16 +75,6 @@ class OnboardingPageView: UIView {
             return messageLabel
         }()
         
-        let button : UIButton = {
-            let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.setTitle("Continue", for: .normal)
-            button.setTitleColor(UIColor.darkGray, for: .normal)
-            button.backgroundColor = UIColor.white
-            button.layer.cornerRadius = 10
-            button.layer.masksToBounds = true
-            return button
-        }()
         
         self.addSubview(stackView)
 
@@ -99,5 +101,7 @@ class OnboardingPageView: UIView {
         
     }
        
-
+    @objc func goLogin(){
+        UIApplication.shared.windows.first?.rootViewController = LoginVC()
+    }
 }
