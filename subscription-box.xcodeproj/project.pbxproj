@@ -11,6 +11,9 @@
 		636C911825CB770900642027 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636C911725CB770900642027 /* OnboardingPageView.swift */; };
 		637B69A625D210DF00D476B4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B69A525D210DF00D476B4 /* HomeVC.swift */; };
 		637B69A925D2110100D476B4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B69A825D2110100D476B4 /* LoginVC.swift */; };
+		639D9E5925D70BF40005F333 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D9E5825D70BF40005F333 /* TabBarController.swift */; };
+		639D9E5F25D70C4F0005F333 /* NewBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D9E5E25D70C4F0005F333 /* NewBoxVC.swift */; };
+		639D9E6625D70C860005F333 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D9E6525D70C860005F333 /* HistoryVC.swift */; };
 		63A2DED525C76FBB00C1D31B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2DED425C76FBB00C1D31B /* AppDelegate.swift */; };
 		63A2DED725C76FBB00C1D31B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2DED625C76FBB00C1D31B /* SceneDelegate.swift */; };
 		63A2DED925C76FBB00C1D31B /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2DED825C76FBB00C1D31B /* OnboardingVC.swift */; };
@@ -22,6 +25,9 @@
 		636C911725CB770900642027 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		637B69A525D210DF00D476B4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		637B69A825D2110100D476B4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		639D9E5825D70BF40005F333 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		639D9E5E25D70C4F0005F333 /* NewBoxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxVC.swift; sourceTree = "<group>"; };
+		639D9E6525D70C860005F333 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		63A2DED125C76FBB00C1D31B /* subscription-box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "subscription-box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A2DED425C76FBB00C1D31B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A2DED625C76FBB00C1D31B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,10 +69,41 @@
 			isa = PBXGroup;
 			children = (
 				63A2DED825C76FBB00C1D31B /* OnboardingVC.swift */,
-				637B69A525D210DF00D476B4 /* HomeVC.swift */,
 				637B69A825D2110100D476B4 /* LoginVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		639D9E5525D70BD40005F333 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				639D9E5825D70BF40005F333 /* TabBarController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		639D9E5B25D70C220005F333 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				637B69A525D210DF00D476B4 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		639D9E6125D70C550005F333 /* New Box */ = {
+			isa = PBXGroup;
+			children = (
+				639D9E5E25D70C4F0005F333 /* NewBoxVC.swift */,
+			);
+			path = "New Box";
+			sourceTree = "<group>";
+		};
+		639D9E6325D70C6B0005F333 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				639D9E6525D70C860005F333 /* HistoryVC.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		63A2DEC825C76FBB00C1D31B = {
@@ -91,6 +128,10 @@
 				63A2DED425C76FBB00C1D31B /* AppDelegate.swift */,
 				63A2DED625C76FBB00C1D31B /* SceneDelegate.swift */,
 				637B699925D2006200D476B4 /* OnBoarding + Login */,
+				639D9E5525D70BD40005F333 /* Navigation */,
+				639D9E5B25D70C220005F333 /* Home */,
+				639D9E6125D70C550005F333 /* New Box */,
+				639D9E6325D70C6B0005F333 /* History */,
 				63A2DEDD25C76FBC00C1D31B /* Assets.xcassets */,
 				63A2DEE225C76FBC00C1D31B /* Info.plist */,
 			);
@@ -166,6 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A2DED925C76FBB00C1D31B /* OnboardingVC.swift in Sources */,
+				639D9E6625D70C860005F333 /* HistoryVC.swift in Sources */,
+				639D9E5F25D70C4F0005F333 /* NewBoxVC.swift in Sources */,
+				639D9E5925D70BF40005F333 /* TabBarController.swift in Sources */,
 				637B69A625D210DF00D476B4 /* HomeVC.swift in Sources */,
 				633442C225D477980082BBB9 /* LoginPageView.swift in Sources */,
 				637B69A925D2110100D476B4 /* LoginVC.swift in Sources */,

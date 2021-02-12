@@ -110,6 +110,7 @@ class LoginPageView: UIView {
             button.backgroundColor = UIColor.white
             button.layer.cornerRadius = 10
             button.layer.masksToBounds = true
+            button.addTarget(self, action: #selector(login), for: .touchUpInside)
             return button
         }()
         
@@ -173,6 +174,10 @@ class LoginPageView: UIView {
             line2.leadingAnchor.constraint(equalTo: password.leadingAnchor)
         ])
         
+    }
+    
+    @objc func login(){
+        UIApplication.shared.windows.first?.rootViewController = TabBarController()
     }
     
     
