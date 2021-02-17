@@ -18,6 +18,9 @@
 		63A2DED725C76FBB00C1D31B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2DED625C76FBB00C1D31B /* SceneDelegate.swift */; };
 		63A2DED925C76FBB00C1D31B /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2DED825C76FBB00C1D31B /* OnboardingVC.swift */; };
 		63A2DEDE25C76FBC00C1D31B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2DEDD25C76FBC00C1D31B /* Assets.xcassets */; };
+		63B050BA25DB4E7C00FBF8C9 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050B925DB4E7C00FBF8C9 /* HistoryCell.swift */; };
+		63B050C025DB516E00FBF8C9 /* HistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050BF25DB516E00FBF8C9 /* HistoryData.swift */; };
+		63B050C425DB65B100FBF8C9 /* HistoryBoxDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050C325DB65B100FBF8C9 /* HistoryBoxDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		63A2DED825C76FBB00C1D31B /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		63A2DEDD25C76FBC00C1D31B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A2DEE225C76FBC00C1D31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63B050B925DB4E7C00FBF8C9 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		63B050BF25DB516E00FBF8C9 /* HistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryData.swift; sourceTree = "<group>"; };
+		63B050C325DB65B100FBF8C9 /* HistoryBoxDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBoxDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,9 @@
 		639D9E6325D70C6B0005F333 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				639D9E6525D70C860005F333 /* HistoryVC.swift */,
+				63B050C725DB65F600FBF8C9 /* Model */,
+				63B050BC25DB511100FBF8C9 /* View */,
+				63B050BE25DB512800FBF8C9 /* Controller */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -136,6 +144,31 @@
 				63A2DEE225C76FBC00C1D31B /* Info.plist */,
 			);
 			path = "subscription-box";
+			sourceTree = "<group>";
+		};
+		63B050BC25DB511100FBF8C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63B050B925DB4E7C00FBF8C9 /* HistoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63B050BE25DB512800FBF8C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63B050C325DB65B100FBF8C9 /* HistoryBoxDetail.swift */,
+				639D9E6525D70C860005F333 /* HistoryVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63B050C725DB65F600FBF8C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63B050BF25DB516E00FBF8C9 /* HistoryData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B050C425DB65B100FBF8C9 /* HistoryBoxDetail.swift in Sources */,
 				63A2DED925C76FBB00C1D31B /* OnboardingVC.swift in Sources */,
 				639D9E6625D70C860005F333 /* HistoryVC.swift in Sources */,
 				639D9E5F25D70C4F0005F333 /* NewBoxVC.swift in Sources */,
@@ -214,8 +248,10 @@
 				633442C225D477980082BBB9 /* LoginPageView.swift in Sources */,
 				637B69A925D2110100D476B4 /* LoginVC.swift in Sources */,
 				63A2DED525C76FBB00C1D31B /* AppDelegate.swift in Sources */,
+				63B050C025DB516E00FBF8C9 /* HistoryData.swift in Sources */,
 				636C911825CB770900642027 /* OnboardingPageView.swift in Sources */,
 				63A2DED725C76FBB00C1D31B /* SceneDelegate.swift in Sources */,
+				63B050BA25DB4E7C00FBF8C9 /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

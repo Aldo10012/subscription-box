@@ -1,19 +1,22 @@
 //
-//  HistoryVC.swift
+//  HistoryBoxDetail.swift
 //  subscription-box
 //
-//  Created by Alberto Dominguez on 2/12/21.
+//  Created by Alberto Dominguez on 2/15/21.
 //
 
 import UIKit
 
-class HistoryVC: UIViewController {
+class HistoryBoxDetail: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .yellow
+        view.backgroundColor = .cyan
     }
     
 

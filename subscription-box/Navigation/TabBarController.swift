@@ -16,7 +16,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         self.delegate = self
 
-        view.self.backgroundColor = .red
+        view.self.backgroundColor = .white
         
         setupViewControllers()
         setupTabBarIcons()
@@ -41,11 +41,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     func setupViewControllers(){
         let homeVC = HomeVC()
         let navController1 = UINavigationController(rootViewController:homeVC)
-        homeVC.tabBarItem = UITabBarItem(title: "New", image: UIImage(systemName: "house"), tag: 0)
+        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
 
         let newBoxVC = NewBoxVC()
         let navController2 = UINavigationController(rootViewController:newBoxVC)
-        newBoxVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(systemName: "shippingbox"), tag: 1)
+        newBoxVC.tabBarItem = UITabBarItem(title: "New", image: UIImage(systemName: "shippingbox"), tag: 1)
         
         let historyVC = HistoryVC()
         let navController3 = UINavigationController(rootViewController:historyVC)
