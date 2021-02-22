@@ -7,31 +7,8 @@
 
 import UIKit
 
-class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let BoxList : [Box] = [
-        Box(month: "February",
-            year: 2021,
-            item: BoxItem(name: "gloves", description: "rubber glove")),
-        Box(month: "February",
-            year: 2021,
-            item: BoxItem(name: "masks", description: "cotton mask")),
-        Box(month: "January",
-            year: 2021,
-            item: BoxItem(name: "gloves", description: "rubber glove")),
-        Box(month: "January",
-            year: 2021,
-            item: BoxItem(name: "gloves", description: "rubber glove")),
-        Box(month: "January",
-            year: 2021,
-            item: BoxItem(name: "masks", description: "cotton mask")),
-        Box(month: "December",
-            year: 2020,
-            item: BoxItem(name: "gloves", description: "rubber glove"))
-    ]
-    
-    
-    //let alienArray = [String](repeating: "Item ", count: 20)
+class HistoryVC: UIViewController{
+    let data = Data()
     
     let table: UITableView = {
         let table = UITableView()
@@ -43,39 +20,46 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        view.backgroundColor = .yellow
         setTable()
         
     }
     
     func setTable(){
         self.view.addSubview(table)
-        table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
-        table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
-        table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
-        table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
+        title = "History"
+        table.pin(to: view)
         table.register(HistoryCell.self, forCellReuseIdentifier: "HistoryCell")
         table.delegate = self
         table.dataSource = self
     }
     
+}
+
+
+
+
+
+extension HistoryVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BoxList.count
+        return data.BoxList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
-        cell.textLabel?.text = " \(BoxList[indexPath.row].month), \(BoxList[indexPath.row].year)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryCell
+        //let box = data.BoxList[indexPath.row]
+        //cell.boxImage.image = UIImage(systemName: "shippingbox")
+        cell.textLabel?.text = " \(data.BoxList[indexPath.row].month) \(data.BoxList[indexPath.row].day), \(data.BoxList[indexPath.row].year)"
+        
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let boxDetail = HistoryBoxDetail()
+        let boxDetail = BoxItemVC()
+        boxDetail.boxItemList = data.BoxList[indexPath.row].item
         self.navigationController?.pushViewController(boxDetail, animated: true)
     }
     
-
-
+    
 }
+

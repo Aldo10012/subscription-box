@@ -77,7 +77,6 @@ class OnboardingPageView: UIView {
         
         
         self.addSubview(stackView)
-
         NSLayoutConstraint.activate([
             stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65),
             stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.6),

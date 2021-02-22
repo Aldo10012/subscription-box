@@ -8,7 +8,9 @@
 import UIKit
 
 class HistoryCell: UITableViewCell {
-
+    
+   
+    
     let background : UIView = {
       let background = UIView()
       background.layer.cornerRadius = 5
@@ -16,6 +18,8 @@ class HistoryCell: UITableViewCell {
       background.translatesAutoresizingMaskIntoConstraints = false
       return background
     }()
+    
+    
 
     
     //initializer for a cell
@@ -31,12 +35,7 @@ class HistoryCell: UITableViewCell {
 
     func setup() {
         self.contentView.addSubview(background)
-        NSLayoutConstraint.activate([
-            background.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
-            background.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-            background.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
-        ])
+        background.pin(to: self)
     }
     
 

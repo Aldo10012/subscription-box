@@ -20,7 +20,10 @@
 		63A2DEDE25C76FBC00C1D31B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2DEDD25C76FBC00C1D31B /* Assets.xcassets */; };
 		63B050BA25DB4E7C00FBF8C9 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050B925DB4E7C00FBF8C9 /* HistoryCell.swift */; };
 		63B050C025DB516E00FBF8C9 /* HistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050BF25DB516E00FBF8C9 /* HistoryData.swift */; };
-		63B050C425DB65B100FBF8C9 /* HistoryBoxDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050C325DB65B100FBF8C9 /* HistoryBoxDetail.swift */; };
+		63B050C425DB65B100FBF8C9 /* BoxItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B050C325DB65B100FBF8C9 /* BoxItemVC.swift */; };
+		63DD458725DC9A5200C2EBBC /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD458625DC9A5200C2EBBC /* UIView+Ext.swift */; };
+		63DD458B25DC9C8A00C2EBBC /* BoxItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD458A25DC9C8A00C2EBBC /* BoxItemCell.swift */; };
+		63FFF80025E33FE900B41335 /* NewBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FFF7FF25E33FE900B41335 /* NewBoxCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,10 @@
 		63A2DEE225C76FBC00C1D31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B050B925DB4E7C00FBF8C9 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		63B050BF25DB516E00FBF8C9 /* HistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryData.swift; sourceTree = "<group>"; };
-		63B050C325DB65B100FBF8C9 /* HistoryBoxDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBoxDetail.swift; sourceTree = "<group>"; };
+		63B050C325DB65B100FBF8C9 /* BoxItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxItemVC.swift; sourceTree = "<group>"; };
+		63DD458625DC9A5200C2EBBC /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		63DD458A25DC9C8A00C2EBBC /* BoxItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxItemCell.swift; sourceTree = "<group>"; };
+		63FFF7FF25E33FE900B41335 /* NewBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				639D9E5E25D70C4F0005F333 /* NewBoxVC.swift */,
+				63FFF7FF25E33FE900B41335 /* NewBoxCell.swift */,
 			);
 			path = "New Box";
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 				639D9E6325D70C6B0005F333 /* History */,
 				63A2DEDD25C76FBC00C1D31B /* Assets.xcassets */,
 				63A2DEE225C76FBC00C1D31B /* Info.plist */,
+				63DD458625DC9A5200C2EBBC /* UIView+Ext.swift */,
 			);
 			path = "subscription-box";
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				63B050B925DB4E7C00FBF8C9 /* HistoryCell.swift */,
+				63DD458A25DC9C8A00C2EBBC /* BoxItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,7 +166,7 @@
 		63B050BE25DB512800FBF8C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63B050C325DB65B100FBF8C9 /* HistoryBoxDetail.swift */,
+				63B050C325DB65B100FBF8C9 /* BoxItemVC.swift */,
 				639D9E6525D70C860005F333 /* HistoryVC.swift */,
 			);
 			path = Controller;
@@ -239,10 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63B050C425DB65B100FBF8C9 /* HistoryBoxDetail.swift in Sources */,
+				63B050C425DB65B100FBF8C9 /* BoxItemVC.swift in Sources */,
 				63A2DED925C76FBB00C1D31B /* OnboardingVC.swift in Sources */,
 				639D9E6625D70C860005F333 /* HistoryVC.swift in Sources */,
 				639D9E5F25D70C4F0005F333 /* NewBoxVC.swift in Sources */,
+				63DD458725DC9A5200C2EBBC /* UIView+Ext.swift in Sources */,
 				639D9E5925D70BF40005F333 /* TabBarController.swift in Sources */,
 				637B69A625D210DF00D476B4 /* HomeVC.swift in Sources */,
 				633442C225D477980082BBB9 /* LoginPageView.swift in Sources */,
@@ -250,7 +260,9 @@
 				63A2DED525C76FBB00C1D31B /* AppDelegate.swift in Sources */,
 				63B050C025DB516E00FBF8C9 /* HistoryData.swift in Sources */,
 				636C911825CB770900642027 /* OnboardingPageView.swift in Sources */,
+				63DD458B25DC9C8A00C2EBBC /* BoxItemCell.swift in Sources */,
 				63A2DED725C76FBB00C1D31B /* SceneDelegate.swift in Sources */,
+				63FFF80025E33FE900B41335 /* NewBoxCell.swift in Sources */,
 				63B050BA25DB4E7C00FBF8C9 /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
