@@ -23,7 +23,7 @@ class NewBoxCell: UICollectionViewCell {
     override init(frame: CGRect){
         super.init(frame: frame)
         contentView.addSubview(imageView)
-        imageView.image = UIImage(named: item)
+        //imageView.image = UIImage(named: item)
     }
     
     required init?(coder: NSCoder) {
@@ -33,7 +33,7 @@ class NewBoxCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         imageView.frame = contentView.bounds
-        imageView.image = nil
+        imageView.image = UIImage(named: item)
     }
     
     override func prepareForReuse() {

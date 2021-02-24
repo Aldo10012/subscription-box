@@ -16,7 +16,7 @@ class BoxItemCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(itemImageView)
         addSubview(itemDetailLabel)
-        
+       
         configureImageView()
         configureDetailLabel()
         setImageConstraints()
