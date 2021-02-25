@@ -11,6 +11,8 @@ import UIKit
 class FavoritesCell: UICollectionViewCell {
     static var identifier: String = "FavoritesCell"
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +23,7 @@ class FavoritesCell: UICollectionViewCell {
         imgView.layer.cornerRadius = 10
         imgView.image = UIImage(named: "mask")
         imgView.backgroundColor = .lightGray
+        titleLabel.text = "mask"
     }
     
 }
